@@ -5,11 +5,11 @@
 }
 
 /*image boarder + rounded corners*/
-img {
+img, video, audio {
   border-style: solid;
   border-color: maroon;
   border-width: .3cm;
-  border-radius: 100px;
+  border-radius: 50px;
 }
 
 /*shifting images to the right of meeting notes*/
@@ -34,6 +34,129 @@ img {
   color: red !important;
 }
 
-#arrow-thing:hover {
+summary:hover {
   color: green;
+}
+
+@media (max-width: 600px) {
+  .text-with-images {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+/*All of the folling is to just encorperate requirements*/
+/* Grid attributes */
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.item {
+  grid-column: 1 / 4;
+}
+
+/* Flexbox attributes */
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Box model using margins and automargin */
+.item {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Combinator selectors */
+.item:hover {
+  transform: scale(1.1);
+}
+
+.item h3 + p {
+  font-style: italic;
+}
+
+.item p ~ a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Weightlifting content without leg workouts */
+.weightlifting {
+  background-color: maroon;
+  padding: 20px;
+}
+
+.weightlifting h2 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.item:nth-child(1) h3::before {
+  content: "Upper Body - ";
+  font-weight: bold;
+}
+
+.item:nth-child(2) h3::before {
+  content: "Core - ";
+  font-weight: bold;
+}
+
+.item:nth-child(3) h3::before {
+  content: "Shoulders - ";
+  font-weight: bold;
+}
+
+/* Flexbox related attributes */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Box model with shorthand margins */
+.box {
+  margin: 20px 30px 20px 30px;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+/* Child combinator */
+.container > .box {
+  background-color: maroon;
+}
+
+/* Combining two selectors combinator */
+.container > .box.title,
+.container > .box.subheading {
+  color: white;
+  font-weight: bold;
+}
+
+/* Static and sticky values applied to the position property */
+.container {
+  position: relative;
+}
+
+.container > .box.sticky {
+  position: sticky;
+  top: 0;
+}
+
+/* inline-block applied to the display property */
+.box {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 200px;
+  vertical-align: middle;
 }
