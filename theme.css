@@ -1,0 +1,39 @@
+/*black background with white text default*/
+* {
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+}
+
+/*image boarder + rounded corners*/
+img {
+  border-style: solid;
+  border-color: maroon;
+  border-width: .3cm;
+  border-radius: 100px;
+}
+
+/*shifting images to the right of meeting notes*/
+.text-with-images {
+	display: flex;
+	align-items: center;
+}
+.text-with-images img {
+	margin-left: 5vw;
+}
+
+/*grid for video and audio layout*/
+#video-audio {
+  display: grid;
+  grid-template-columns: repeat(1, 2fr); 
+  grid-gap: 0px;
+  border: maroon .3cm;
+}
+
+
+#arrow-thing:active {
+  color: red !important;
+}
+
+#arrow-thing:hover {
+  color: green;
+}
