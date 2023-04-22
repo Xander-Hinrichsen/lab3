@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap');
+
+h1 {
+	background: linear-gradient(to right, hsl(13, 99%, 42%), #ff0, #0f0, #0ff, #00f, #f0f, #f00);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  text-align: center;
+  font-size: 5vi;
+  text-decoration: none;
+  display: block;
+  max-width: 40000px;
+  min-width: 0px;
+  font-family: 'Rubik Wet Paint', cursive;
+}
+
+h2 {
+  text-decoration: underline;
+  padding-left: 10px;
+  text-align: left;
+}
+
+#date {
+  text-align: center;
+}
+
+div {
+  padding-top: 2dvh;
+  padding-right: 12mm;
+  padding-bottom: 2dvh;
+  padding-left: 12mm;
+}
+
+section {
+  padding: 10px 20px 30px 40px;
+}
+
+
+
